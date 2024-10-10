@@ -8,6 +8,11 @@ header{
     justify-content: center;
     justify-content: space-between;
 }
+header img{
+    height: 100%;
+    background: transparent;
+
+}
 h1, h2{
     padding: 1rem;
 }
@@ -21,19 +26,31 @@ nav button{
     background: transparent;
     padding: 0.5rem;
 }
+nav button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 #MainContent{
     height: 400px;
     padding-top: 1rem;
     display: flex;
+    overflow: hidden;
 
 }
-.KaruselliTekstiHolder{
+.KaruselliTekstiHolder {
+    position: relative;
     width: 40%;
 }
+.ModelInfo{
+    text-align: right;
+    padding-right: 1rem;
+}
+
+
 .Karuselliholder {
     width: 60%;
 }
-#carousel {
+#karuselli {
     position: relative;
     width: 100%;
     max-width: 600px;
@@ -41,14 +58,15 @@ nav button{
     overflow: hidden;
 }
 
-.carousel-slide {
+.karuselli-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide img {
+.karuselli-slide img {
     width: 100%;
-    border: 1px solid black;
+    height: auto;
+    object-fit: cover;
 }
 
 #prevBtn, #nextBtn {
@@ -60,6 +78,9 @@ nav button{
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+#prevBtn:hover, #nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #prevBtn {
