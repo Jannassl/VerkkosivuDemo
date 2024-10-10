@@ -2,12 +2,13 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../src/css/default.css">
+    <link rel="stylesheet" href="css/etusivu.css">
     <title>Demo</title>
 </head>
 <body>
   <header>
     <h1>Demo verkkosivu</h1>
+      <h2> Logo</h2>
   </header>
 
   <nav>
@@ -17,7 +18,26 @@
     <button id="Nappi4">Nappi 4</button>
   </nav>
   <div id="MainContent">
-    <img src="">
+      <div class="KaruselliTekstiHolder">
+          <h2>Vuoden 2024 Porsche - mallisto</h2>
+          <p>
+              "'Firman nimi' löydät Euroopan suosituimmat urheiluautot.
+              Vuoden kuumimmassa auto mallistossa on tarjolla myös plug-in-hybridejä ja
+              täyssähköautoja. Tutustu mallistoon ja tule 'firman nimi'"
+          </p>
+      </div>
+      <div class="Karuselliholder">
+          <div id="carousel">
+              <div class="carousel-slide">
+                  <img src="./resources/taycan-profiili.jpg" alt="Etusivun auto 1">
+                  <img src="./resources/auto2.jpg" alt="Etusivun auto 2">
+                  <img src="./resources/auto3.jpg" alt="Etusivun auto 3">
+              </div>
+              <button id="prevBtn">Edellinen</button>
+              <button id="nextBtn">Seuraava</button>
+          </div>
+
+      </div>
   </div>
 
 </body>

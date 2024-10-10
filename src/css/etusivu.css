@@ -1,0 +1,71 @@
+body{
+    font-family: 'Arial',sans-serif;
+    background: whitesmoke;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+h1, h2{
+    padding: 1rem;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+nav button{
+    background: transparent;
+    padding: 0.5rem;
+}
+#MainContent{
+    height: 400px;
+    padding-top: 1rem;
+    display: flex;
+
+}
+.KaruselliTekstiHolder{
+    width: 40%;
+}
+.Karuselliholder {
+    width: 60%;
+}
+#carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
