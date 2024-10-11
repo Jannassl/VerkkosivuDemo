@@ -1,49 +1,67 @@
 body{
     font-family: 'Arial',sans-serif;
     background: whitesmoke;
+    margin: auto;
 }
 
 header{
     display: flex;
     justify-content: center;
-    justify-content: space-between;
 }
 header img{
     height: 100%;
     background: transparent;
 
 }
-h1, h2{
-    padding: 1rem;
+h1{
+    padding-bottom: 1rem;
+    font-size: 40px;
 }
+
 nav {
     display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     justify-content: center;
     justify-content: space-around;
+    border-top: 1px solid saddlebrown;
+    border-bottom: 1px solid saddlebrown;
 }
 
 nav button{
     background: transparent;
     padding: 0.5rem;
+    border: none;
 }
 nav button:hover{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color:saddlebrown;
     cursor: pointer;
+    color: whitesmoke;
 }
 #MainContent{
     height: 400px;
-    padding-top: 1rem;
+    padding: 1rem;
     display: flex;
     overflow: hidden;
+    border: 1px solid saddlebrown;
 
 }
 .KaruselliTekstiHolder {
     position: relative;
     width: 40%;
 }
+.KaruselliTekstiHolder p{
+    font-size: 20px;
+}
 .ModelInfo{
     text-align: right;
     padding-right: 1rem;
+}
+#modelName{
+    font-size: 30px;
+}
+#modelDetail{
+    font-size: 20px;
 }
 
 
@@ -90,3 +108,50 @@ nav button:hover{
 #nextBtn {
     right: 10px;
 }
+.vaihtoautot{
+    display: flex;
+}
+.vaihtoautoHeader h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+.vaihtoautoImageHolder{
+    padding: 0.5rem;
+    width: 50%;
+}
+.vaihtoautotTekstiHolder{
+    width: 50%;
+    text-align: center;
+}
+.vaihtoautotTekstiHolder h3{
+    font-size: 30px;
+    text-align: center;
+}
+.vaihtoautotTekstiHolder p{
+    font-size: 20px;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+.vaihtoautoImageHolder img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+#teeTarjous{
+    background-color: saddlebrown;
+    padding: 0.5rem;
+    border: none;
+    font-size: 20px;
+    color: whitesmoke;
+    border-radius: 3rem;
+}
+#teeTarjous:hover{
+    background-color:transparent;
+    cursor: pointer;
+    border-radius: 3rem;
+    border: 1px solid black;
+    color: black;
+}
+
+
