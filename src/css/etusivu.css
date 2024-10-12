@@ -1,19 +1,24 @@
-body{
-    font-family: 'Arial',sans-serif;
-    background: whitesmoke;
+body {
+    font-family: 'Arial', sans-serif;
+    background: #e0e0e0; /* Light grey background */
+    color: #333; /* Dark grey text */
     margin: auto;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
+    background-color: #1a1a1a; /* Dark grey */
+    color: #fff; /* White text */
+    padding: 1rem;
 }
-header img{
+
+header img {
     height: 100%;
     background: transparent;
-
 }
-h1{
+
+h1 {
     padding-bottom: 1rem;
     font-size: 40px;
 }
@@ -22,58 +27,68 @@ nav {
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    justify-content: center;
     justify-content: space-around;
-    border-top: 1px solid saddlebrown;
-    border-bottom: 1px solid saddlebrown;
+    border-top: 1px solid #1a1a1a; /* Dark grey */
+    border-bottom: 1px solid #1a1a1a; /* Dark grey */
+    background-color: #333; /* Dark grey */
 }
 
-nav button{
-    background: transparent;
+nav button {
+    background: #007bff; /* Blue */
     padding: 0.5rem;
     border: none;
+    color: #fff; /* White text */
+    border-radius: 5px;
 }
-nav button:hover{
-    background-color:saddlebrown;
+
+nav button:hover {
+    background-color: #0056b3; /* Darker blue */
     cursor: pointer;
-    color: whitesmoke;
 }
-#MainContent{
+
+#MainContent {
     height: 400px;
     padding: 1rem;
     display: flex;
     overflow: hidden;
-    border: 1px solid saddlebrown;
-
 }
+
 .KaruselliTekstiHolder {
     position: relative;
     width: 40%;
 }
-.KaruselliTekstiHolder p{
+
+.KaruselliTekstiHolder p {
     font-size: 20px;
+    color: #333; /* Dark grey */
 }
-.ModelInfo{
+
+.ModelInfo {
     text-align: right;
     padding-right: 1rem;
 }
-#modelName{
+
+#modelName {
     font-size: 30px;
-}
-#modelDetail{
-    font-size: 20px;
+    color: #1a1a1a; /* Dark grey */
 }
 
+#modelDetail {
+    font-size: 20px;
+    color: #333; /* Dark grey */
+}
 
 .Karuselliholder {
     width: 60%;
 }
+
 #karuselli {
     position: relative;
     width: 100%;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    background-color: #ccc; /* Light grey */
 }
 
 .karuselli-slide {
@@ -97,6 +112,7 @@ nav button:hover{
     padding: 10px;
     cursor: pointer;
 }
+
 #prevBtn:hover, #nextBtn:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -108,6 +124,7 @@ nav button:hover{
 #nextBtn {
     right: 10px;
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -118,89 +135,110 @@ nav button:hover{
         transform: translateY(0);
     }
 }
-.vaihtoautoHeader{
+
+.vaihtoautoHeader {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-.vaihtoautoHeader.animate{
+
+.vaihtoautoHeader.animate {
     opacity: 1;
     animation: fadeInUp 1s ease-in-out;
+}
+
+.vaihtoautoHeader h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 4rem;
+    color: #1a1a1a; /* Dark grey */
 }
 
 .vaihtoautot {
     opacity: 0;
     display: flex;
     transition: opacity 0.5s ease-in-out;
+    background-color: #e0e0e0; /* Light grey */
 }
 
 .vaihtoautot.animate {
     opacity: 1;
     animation: fadeInUp 1s ease-in-out;
 }
-.vaihtoautoHeader h2 {
-    font-size: 40px;
-    text-align: center;
-    padding-bottom: 4rem;
-}
-.vaihtoautoImageHolder{
+
+.vaihtoautoImageHolder {
     padding: 0.5rem;
     width: 50%;
 }
-.vaihtoautotTekstiHolder{
+
+.vaihtoautotTekstiHolder {
     width: 50%;
     text-align: center;
 }
-.vaihtoautotTekstiHolder h3{
+
+.vaihtoautotTekstiHolder h3 {
     font-size: 30px;
     text-align: center;
+    color: #1a1a1a; /* Dark grey */
 }
-.vaihtoautotTekstiHolder p{
+
+.vaihtoautotTekstiHolder p {
     font-size: 20px;
     padding-right: 5rem;
     padding-left: 5rem;
+    color: #333; /* Dark grey */
 }
+
 .vaihtoautoImageHolder img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-#teeTarjous{
-    background-color: saddlebrown;
+
+#teeTarjous {
+    background-color: #007bff; /* Blue */
     padding: 0.5rem;
     border: none;
     font-size: 20px;
     color: whitesmoke;
     border-radius: 3rem;
+    width: 200px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
-#teeTarjous:hover{
-    background-color:transparent;
+
+#teeTarjous:hover {
+    background-color: #0056b3; /* Darker blue */
     cursor: pointer;
-    border-radius: 3rem;
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #333; /* Dark grey */
+    color: #333; /* Dark grey */
 }
-.tarjouksetHeader h2{
+
+.tarjouksetHeader h2 {
     font-size: 40px;
     text-align: center;
+    color: #1a1a1a; /* Dark grey */
 }
-.tarjoukset{
-    background-color: saddlebrown;
+
+.tarjoukset {
+    background-color: #333; /* Dark grey */
     height: 400px;
     margin: auto;
     justify-content: space-between;
     display: flex;
 }
+
 .tarjousKortti {
-    background-color: whitesmoke;
+    background-color: #e0e0e0; /* Light grey */
     height: 80%;
     width: 300px;
     margin: 3rem;
     align-items: center;
+    border: 1px solid #1a1a1a; /* Dark grey */
 }
 
 .tarjousImageContainer {
     width: 100%;
-    height: 200px; /* Set a fixed height */
+    height: 50%; /* Set a fixed height */
     overflow: hidden;
 }
 
@@ -210,5 +248,24 @@ nav button:hover{
     object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 
+.tarjousModelContainer {
+    padding: 1rem;
+    height: 10%;
+    color: #1a1a1a; /* Dark grey */
+}
 
+.tarjousDetailContainer {
+    height: 40%;
+    padding: 1rem;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide any overflow content */
+}
 
+.tarjousDetailContainer p {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #333; /* Dark grey */
+}
+.tarjousKortti:hover{
+    cursor: pointer;
+}
