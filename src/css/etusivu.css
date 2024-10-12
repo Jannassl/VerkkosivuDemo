@@ -1,15 +1,15 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: #e0e0e0; /* Light grey background */
-    color: #333; /* Dark grey text */
+    background: #e0e0e0;
+    color: #333;
     margin: auto;
 }
 
 header {
     display: flex;
     justify-content: center;
-    background-color: #1a1a1a; /* Dark grey */
-    color: #fff; /* White text */
+    background-color: black;
+    color: #fff;
     padding: 1rem;
 }
 
@@ -28,22 +28,52 @@ nav {
     padding-top: 1rem;
     padding-bottom: 1rem;
     justify-content: space-around;
-    border-top: 1px solid #1a1a1a; /* Dark grey */
-    border-bottom: 1px solid #1a1a1a; /* Dark grey */
-    background-color: #333; /* Dark grey */
 }
 
 nav button {
-    background: #007bff; /* Blue */
+    position: relative;
     padding: 0.5rem;
     border: none;
-    color: #fff; /* White text */
+    color: #fff;
     border-radius: 5px;
+    background: transparent;
+}
+nav button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+.navImageContainer {
+    position: relative;
 }
 
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 nav button:hover {
-    background-color: #0056b3; /* Darker blue */
     cursor: pointer;
+}
+nav button:hover::after {
+    width: 100%;
+}
+
+.mainImageContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.mainImageContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #MainContent {
@@ -60,7 +90,7 @@ nav button:hover {
 
 .KaruselliTekstiHolder p {
     font-size: 20px;
-    color: #333; /* Dark grey */
+    color: #333;
 }
 
 .ModelInfo {
@@ -70,12 +100,12 @@ nav button:hover {
 
 #modelName {
     font-size: 30px;
-    color: #1a1a1a; /* Dark grey */
+    color: #1a1a1a;
 }
 
 #modelDetail {
     font-size: 20px;
-    color: #333; /* Dark grey */
+    color: #333;
 }
 
 .Karuselliholder {
@@ -88,7 +118,7 @@ nav button:hover {
     max-width: 600px;
     margin: auto;
     overflow: hidden;
-    background-color: #ccc; /* Light grey */
+    background-color: #ccc;
 }
 
 .karuselli-slide {
