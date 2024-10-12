@@ -108,8 +108,34 @@ nav button:hover{
 #nextBtn {
     right: 10px;
 }
-.vaihtoautot{
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.vaihtoautoHeader{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.vaihtoautoHeader.animate{
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.vaihtoautot {
+    opacity: 0;
     display: flex;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.vaihtoautot.animate {
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
 }
 .vaihtoautoHeader h2 {
     font-size: 40px;
@@ -153,5 +179,36 @@ nav button:hover{
     border: 1px solid black;
     color: black;
 }
+.tarjouksetHeader h2{
+    font-size: 40px;
+    text-align: center;
+}
+.tarjoukset{
+    background-color: saddlebrown;
+    height: 400px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+}
+.tarjousKortti {
+    background-color: whitesmoke;
+    height: 80%;
+    width: 300px;
+    margin: 3rem;
+    align-items: center;
+}
+
+.tarjousImageContainer {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    overflow: hidden;
+}
+
+.tarjousImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
 
 

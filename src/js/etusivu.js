@@ -7,6 +7,14 @@ const nextBtn = document.querySelector('#nextBtn');
 const modelName = document.querySelector('#modelName');
 const modelDetail = document.querySelector('#modelDetail');
 
+//Tarjous osio
+const tarjousKortti = document.querySelector('.tarjousKortti');
+const tarjousImageContainer = document.querySelector('.tarjousImageContainer');
+const tarjousModelContainer = document.querySelector('.tarjousModelContainer');
+const tarjousDetailContainer = document.querySelector('.tarjousDetailContainer');
+
+
+
 let counter = 0;
 const size = karuselliImages[0].clientWidth;
 
@@ -33,6 +41,25 @@ async function updateModelInfo(counter){
             modelDetail.textContent ="Täyssähkö";
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const vaihtoautot = document.querySelector('.vaihtoautot');
+    const vaihtoautoHeader = document.querySelector('.vaihtoautoHeader');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            } else {
+                entry.target.classList.remove('animate');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(vaihtoautot);
+    observer.observe(vaihtoautoHeader);
+});
 
 nextBtn.addEventListener('click', () => {
     if(counter >= karuselliImages.length -1)return;
@@ -49,5 +76,6 @@ prevBtn.addEventListener('click', () => {
     karuselliSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     updateModelInfo(counter);
 });
+
 
 updateModelInfo(counter);
