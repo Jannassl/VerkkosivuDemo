@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/etusivu.css">
     <script src="js/etusivu.js" defer></script>
     <title>Demo</title>
 </head>
 <body>
-  <header>
-    <h1>Automaa</h1>
-  </header>
-    <div class="navImageContainer">
-      <nav>
-        <button id="Nappi1">VAIHTOAUTOT</button>
-        <button id="Nappi2">TARJOUKSET</button>
-        <button id="Nappi3">TUONTIAUTOT</button>
-        <button id="Nappi4">OTA YHTEYTTÄ</button>
-      </nav>
-      <div class="mainImageContainer">
-          <img src="./resources/background-possu.jpg" alt="">
-      </div>
+<div class="navheaderContainer">
+    <header>
+        <h1>Automaa</h1>
+    </header>
+    <nav>
+        <button id="vaihtoautoBtn">VAIHTOAUTOT</button>
+        <button id="tarjousBtn">TARJOUKSET</button>
+        <button id="contactBtn">OTA YHTEYTTÄ</button>
+    </nav>
+</div>
+  <div class="mainImageContainer">
+      <img src="./resources/911-4K.jpg" alt="">
   </div>
   <div id="MainContent">
       <div class="KaruselliTekstiHolder">
@@ -119,5 +117,30 @@
             </div>
         </div>
     </div>
+<footer>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <img src="./resources/facebook.png" alt="Facebook">
+            <p>Facebook</p>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="./resources/instagram.png" alt="Instagram">
+            <p>Instagram</p>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <img src="./resources/twitter.png" alt="Twitter">
+            <p>X</p>
+        </a>
+    </div>
+    <p>&copy; 2024 Automaa. All rights reserved.</p>
+</footer>
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Yhteystiedot</h2>
+        <p>Sähköposti: Matti@meikalainen.com</p>
+        <p>Phone: +123456789</p>
+    </div>
+</div>
 </body>
 </html>
