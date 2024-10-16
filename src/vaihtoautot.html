@@ -4,6 +4,12 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/vaihtoautot.css">
     <script src="./js/vaihtoautot.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
     <title>vaihtoautot</title>
 </head>
 <body>
@@ -12,7 +18,9 @@
 </div>
 <div class="siteNavHeader">
     <header>
-        <h1>Automaa</h1>
+        <button id="headerBtn">
+            <h1>Automaa</h1>
+        </button>
     </header>
     <nav>
         <button id="etusivuBtn">ETUSIVU</button>
@@ -122,6 +130,11 @@
         <h2>Yhteystiedot</h2>
         <p>Sähköposti: Matti@meikalainen.com</p>
         <p>Phone: +123456789</p>
+        <div class="mapContainer">
+            <h3>Toimipaikka (Kartta latautuu hitaasti...)</h3>
+            <div id="map"></div>
+
+        </div>
     </div>
 </div>
 </body>

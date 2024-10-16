@@ -22,6 +22,11 @@ tarjousBtn.addEventListener('click', () => {
     });
 });
 
+const headerBtn = document.querySelector('#headerBtn');
+headerBtn.addEventListener('click', () => {
+    window.location.href="etusivu.html";
+})
+
 function updateModelInfo(counter) {
     switch (counter) {
         case 0:
@@ -83,6 +88,43 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const map = L.map('map').setView([60.240178, 24.850387], 14);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    const marker = L.marker([60.240178, 24.850387]).addTo(map);
+});
+
+
+
+
+
+
+
+const teeTarjous = document.querySelector('#teeTarjous');
+const tarjousModal = document.querySelector('#tarjousModal');
+
+teeTarjous.addEventListener('click', () => {
+    tarjousModal.style.display = 'block';
+});
+
+const closeBtns = document.querySelectorAll('.close');
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.parentElement.parentElement.style.display = 'none';
+    });
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == tarjousModal) {
+        tarjousModal.style.display = 'none';
+    }
+});
+
 
 
 window.addEventListener('resize', updateCarousel);

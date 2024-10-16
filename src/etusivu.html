@@ -4,12 +4,20 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/etusivu.css">
     <script src="js/etusivu.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
     <title>Demo</title>
 </head>
 <body>
 <div class="navheaderContainer">
     <header>
-        <h1>Automaa</h1>
+        <button id="headerBtn">
+            <h1>Automaa</h1>
+        </button>
     </header>
     <nav>
         <button id="vaihtoautoBtn">VAIHTOAUTOT</button>
@@ -140,6 +148,35 @@
         <h2>Yhteystiedot</h2>
         <p>Sähköposti: Matti@meikalainen.com</p>
         <p>Phone: +123456789</p>
+        <div class="mapContainer">
+            <h3>Toimipaikka (Kartta latautuu hitaasti.../ Jos avaa dev tools niin lataa heti??)</h3>
+            <div id="map"></div>
+
+        </div>
+    </div>
+</div>
+<div id="tarjousModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tarjous lomake (tämä palvelu ei ole toiminnassa)</h2>
+        <form id="tarjousForm">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Puhelinnumero:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="carRegister">Auton rekisterinumero:</label>
+            <input type="text" id="carRegister" name="carModel" required>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Lähetä</button>
+        </form>
     </div>
 </div>
 </body>
